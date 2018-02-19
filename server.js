@@ -15,7 +15,7 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/article -one', function(req, res){
     res.send('article-one will be served ');
 });
-app.get('article-two',function(req,res){
+app.get('/article-two',function(req,res){
     res.send('article-two will served');
 });
 app.get('/article-3',function(req,res){
