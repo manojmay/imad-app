@@ -18,8 +18,8 @@ app.get('/article-one', function(req, res){
 app.get('/article-two',function(req,res){
     res.send('article-two will served');
 });
-app.get('/article-3',function(req,res){
-    res.send('article -3 will be served');
+app.get('/article-three',function(req,res){
+    res.send('article-three will be served');
 });
 
 
