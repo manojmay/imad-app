@@ -6,7 +6,9 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var Articleone = {
+var Articles = {
+    
+    Articleone :{
     title:"Article-one",
     heading:"Article-one",
     content:          ` <p>
@@ -28,6 +30,35 @@ var Articleone = {
                          </p2>`
     
     
+},
+
+    Articletwo :{
+        
+           title:"Article-two",
+          heading:"Article-two",
+          content:   `        <p>
+                        I, I wish you could swim
+                        Like the dolphins
+                        Like dolphins can swim
+                        Though nothing, nothing will keep us together
+                        We can beat them, forever and ever
+                        Oh, we can be heroes just for one day 
+                        <i>Heros</i>
+                    </p>
+                    
+                    
+                    <p2>
+                        I, I will be King
+                        And you, you will be Queen
+                        Though nothing will drive them away
+                        We can be heroes just for one day
+                        We can be us just for one day
+                     
+                         
+                         
+                    </p2>
+    ` 
+    }
 };
 function createTemplate(data)
 {
