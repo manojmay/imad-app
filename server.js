@@ -5,6 +5,67 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var Articleone = {
+    title:"Article-one",
+    heading:"Article-one",
+    content:          ` <p>
+                        Oh to see without the eyes the first time you have kissed me .
+                        Boundelss by the time I cried ,I built your arms around me .
+                        Oh woah woe Its me 
+                        <i>Mystery of love</i>
+                        </p>
+                    
+                    
+                         <p2>
+                        
+                        
+                        The first time that you touched me
+                         Oh, will wonders ever cease?
+                         Blessed be the mystery of love 
+                         
+                         
+                         </p2>`
+    
+    
+};
+function createTemplate(data)
+{
+ var title = data.title;
+ var heading = data.heading;
+ var content = data.content;
+ 
+                var htmltemplate = `
+                <html>
+                <head>
+                    <title> ${title} </title>
+                    
+                    <meta name  = "viewport" content="width=device-width, initial-scale=1" />
+                <link href="/ui/style.css" rel="stylesheet" />
+                </head>    
+                    <body>
+                        <div class="some">
+                            <div>
+                            <a href="/">home</a>
+                        </div>
+                        <hr/>
+                        <h5>${heading}</h5>
+                        
+                        <div>
+                            date 
+                        </div>
+                        <div>
+                           ${content}
+                        
+                        </div>
+                        </div>
+                        </body>
+                        
+                        </html>
+                `;
+                return htmltemplate;
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -16,7 +77,7 @@ app.get('/article-one', function(req, res){
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html')); 
 });
 app.get('/article-two',function(req,res){
-     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+     res.send(createTemplate(Articleone));
     
 });
 app.get('/article-three',function(req,res){
