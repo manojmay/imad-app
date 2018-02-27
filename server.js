@@ -102,11 +102,11 @@ app.get('/', function (req, res) {
 });
 
 
-app.get(':/article_Name', function(req, res){
+app.get(':/articleName', function(req, res){
     //article_Nmae == Article-one
     //article_Name == {} content object for article one
-     var article_Name = req.params.article_Name;
-     res.send(createTemplate(Articles[article_Name]));
+     var articleName = req.params.articleName;
+     res.send(createTemplate(Articles[articleName]));
      
 });
    
