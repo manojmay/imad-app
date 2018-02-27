@@ -102,7 +102,7 @@ app.get('/', function (req, res) {
 });
 
 
-app.get(':/articleName', function(req, res){
+app.get('/:articleName', function(req, res){
     //article_Nmae == Article-one
     //article_Name == {} content object for article one
      var articleName = req.params.articleName;
